@@ -33,4 +33,12 @@ public class HeadController {
 
     }
 
+    @RequestMapping("/now")
+    public ModelAndView now(HttpServletRequest request, ModelMap model) {
+        ModelAndView mav = new ModelAndView("head");
+
+        mav.addObject("message", LocalDateTime.now());
+        return mav;
+    }
+
 }
