@@ -1,0 +1,71 @@
+# Auto detect text files and perform LF normalization
+#* text=auto
+
+# http://huan-lin.blogspot.com/2013/10/git-windows.html
+# do not allow auto conversion of LF/CRLF
+* -text
+
+# Custom for Visual Studio
+*.cs     diff=csharp
+*.sln    merge=union
+*.csproj merge=union
+*.vbproj merge=union
+*.fsproj merge=union
+*.dbproj merge=union
+
+# Standard to msysgit
+*.doc    diff=astextplain
+*.DOC    diff=astextplain
+*.docx   diff=astextplain
+*.DOCX   diff=astextplain
+*.dot    diff=astextplain
+*.DOT    diff=astextplain
+*.pdf    diff=astextplain
+*.PDF    diff=astextplain
+*.rtf    diff=astextplain
+*.RTF    diff=astextplain
+
+# enforce these files must always use LF for tools to work
+*.js eol=lf
+*.map eol=lf
+*.java eol=lf
+*.groovy eol=lf
+*.gy eol=lf
+*.gyc eol=lf
+*.gradle eol=lf
+*.properties eol=lf
+*.xml eol=lf
+*.dtd eol=lf
+*.jsp eol=lf
+*.ftl eol=lf
+*.vm eol=lf
+*.tld eol=lf
+*.css eol=lf
+*.sass eol=lf
+*.less eol=lf
+*.html eol=lf
+*.htc eol=lf
+*.svg eol=lf
+*.sh eol=lf
+*.script eol=lf
+*.txt eol=lf
+*.md eol=lf
+*.json eol=lf
+*.yml eol=lf
+*.sql eol=lf
+*.subject eol=lf
+*.wsdl eol=lf
+*.xsd eol=lf
+*.csv eol=lf
+*.inc eol=lf
+*.php eol=lf
+*.engine eol=lf
+*.info eol=lf
+*.install eol=lf
+*.module eol=lf
+*.po eol=lf
+
+# these files are using CRLF
+*.bat eol=crlf
+*.cmd eol=crlf
+

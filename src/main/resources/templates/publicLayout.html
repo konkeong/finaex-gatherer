@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+    <meta charset="utf-8"/>
+    <title>Public Layout</title>
+</head>
+<body>
+    <header>
+        <h3 layout:fragment="finaex-header">Header</h3>
+    </header>
+    <section layout:fragment="finaex-content">
+        <div>Content</div>
+    </section>
+    <footer>
+        <span style="font-size: xx-small">Copyright &copy; 2017 finaex. All Rights Reserved.</span>
+    </footer>
+</body>
+</html>

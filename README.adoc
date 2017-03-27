@@ -1,0 +1,17 @@
+= Finaex Gatherer
+
+Project to consist of scheduled tasks to pull data (HTML, JSON) from external sources and save locally.
+
+
+
+Dim strUrl As String = "http://www.publicmutual.com.my/application/fund/fundprice.aspx"
+
+Dim strUrl As String = String.Format("http://biz.thestar.com.my.s3.amazonaws.com/json/{0:yyyy}/{0:MM}/{0:dd}/money.js", dtInfo, strNow)
+If (getRawHtml(strUrl, strRawHtml, "biz.thestar.com.my.s3.amazonaws.com") = False) Then
+
+http://www.maybank2u.com.my/mbbfrx/gold_rate.htm
+
+
+Runing Spring boot locally
+http://localhost:8181/gatherer/
+

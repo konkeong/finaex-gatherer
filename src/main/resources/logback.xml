@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<configuration scan="true" scanPeriod="30 seconds">
+
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+    <!-- logger name="org.springframework" level="DEBUG"/-->
+
+    <appender name="AppAppender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/finaex-gatherer.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+            <fileNamePattern>logs/finaex-gatherer.log.%i</fileNamePattern>
+            <minIndex>1</minIndex>
+            <maxIndex>10</maxIndex>
+        </rollingPolicy>
+        <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+            <maxFileSize>10MB</maxFileSize>
+        </triggeringPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5p [%t] [%C] \(%F:%L\) - %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="org.gnoeknok.finaex.gatherer" additivity="false">
+        <level value="DEBUG"/>
+        <appender-ref ref="AppAppender"/>
+    </logger>
+
+</configuration>
