@@ -4,7 +4,8 @@
 package org.gnoeknok.finaex.gatherer.controller;
 
 import java.lang.invoke.MethodHandles;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -28,16 +29,15 @@ public class HeadController {
     public ModelAndView home(HttpServletRequest request, ModelMap model) {
         ModelAndView mav = new ModelAndView("head");
 
-        mav.addObject("message", LocalDateTime.now());
+        mav.addObject("message", "The time now is " + ZonedDateTime.now());
         return mav;
-
     }
 
     @RequestMapping("/now")
     public ModelAndView now(HttpServletRequest request, ModelMap model) {
         ModelAndView mav = new ModelAndView("head");
 
-        mav.addObject("message", LocalDateTime.now());
+        mav.addObject("message", ZonedDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME));
         return mav;
     }
 
